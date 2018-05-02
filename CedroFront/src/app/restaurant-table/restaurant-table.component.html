@@ -1,0 +1,22 @@
+<table>
+  <tr>
+
+    <th></th>
+    <th></th>
+    <th>Name</th>
+
+  </tr>
+
+  <tr *ngFor="let res of restaurants">
+    <td>
+      <button (click)="deleteRestaurant(res.id)">Deletar restaurante</button>
+    </td>
+    <td>
+      <a routerLink="/restaurant/{{res.id}}">Editar restaurante</a>
+    </td>
+    <td>
+      {{res.name}}
+    </td>
+  </tr>
+
+</table>

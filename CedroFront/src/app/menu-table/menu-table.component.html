@@ -1,0 +1,30 @@
+<table>
+  <tr>
+
+    <th></th>
+    <th></th>
+    <th>Name</th>
+    <th>RestaurantId</th>
+    <th>Price</th>
+
+  </tr>
+
+  <tr *ngFor="let men of menus">
+    <td>
+      <button (click)="deleteMenu(men.id)">Deletar menu</button>
+    </td>
+    <td>
+      <a routerLink="/menu/{{men.id}}">Editar prato</a>
+    </td>
+    <td>
+      {{men.name}}
+    </td>
+	<td>
+      {{men.restaurantId}}
+    </td>
+	<td>
+      {{men.price}}
+    </td>
+  </tr>
+
+</table>

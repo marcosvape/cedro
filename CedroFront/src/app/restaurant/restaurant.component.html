@@ -1,0 +1,16 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit()" #restaurantForm="ngForm">
+
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name"
+       required
+       [(ngModel)]="restaurant.name" name="name">
+      </div>
+
+      <a routerLink="/restaurants">Cancelar</a>
+
+      <button type="submit" class="btn btn-success">Submit</button>
+
+    </form>
+</div>

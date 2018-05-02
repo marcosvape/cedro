@@ -1,0 +1,30 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit()" #menuForm="ngForm">
+
+	<div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name"
+       required
+       [(ngModel)]="menu.name" name="name">
+      </div>
+
+		<div class="form-group">
+	        <label for="price">Price</label>
+	        <input type="text" class="form-control" id="price"
+	       required
+	       [(ngModel)]="menu.price" name="price">
+		</div>
+
+      	<div class="form-group">
+		  <label for="power">Restaurant</label>
+		  <select class="form-control" id="restaurantId" name="restaurantId" required [(ngModel)]="menu.restaurantId">
+		    <option *ngFor="let res of restaurants" [value]="res.id">{{res.name}}</option>
+		  </select>
+		</div>
+
+      <a routerLink="/menus">Cancelar</a>
+
+      <button type="submit" class="btn btn-success">Submit</button>
+
+    </form>
+</div>
